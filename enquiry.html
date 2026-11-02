@@ -1,0 +1,362 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry Ledger | Sunrise Acres Farm</title>
+<meta name="description" content="Contact Sunrise Acres Farm about fresh farm produce, wholesale quantities, bulk reservations and delivery enquiries in Gauteng, South Africa.">
+<meta name="keywords" content="Sunrise Acres Farm, farm produce, fresh vegetables, cabbage, spinach, tomatoes, eggs, wholesale produce, Gauteng, South Africa">
+<meta name="author" content="Thato Jasmine Mohajane">
+<meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --primary-green: #2c5e3b;
+            --accent-green: #4caf50;
+            --earth-brown: #5c4033;
+            --light-bg: #f9f6f0;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --error-red: #c62828;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 1.5rem 1rem 0.5rem;
+        }
+
+        .logo h1 {
+            color: var(--primary-green);
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-tagline {
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: var(--primary-green);
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: var(--white);
+            padding: 0.8rem 1.2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: var(--accent-green);
+        }
+
+        .Announcement {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .Announcement > h2 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .announcement-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-left: 5px solid var(--accent-green);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-field {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-field label,
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #a3b899;
+            border-radius: 5px;
+            background-color: var(--white);
+            color: var(--text-dark);
+            font: inherit;
+        }
+
+        .form-control:focus {
+            outline: 2px solid var(--accent-green);
+            outline-offset: 1px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: var(--white);
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font: inherit;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-green);
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .content-container > h2 {
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .form-container {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .checkbox-group input {
+            margin-top: 0.4rem;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .btn-action {
+            display: inline-block;
+            width: 100%;
+            padding: 0.85rem;
+            background-color: var(--accent-green);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-action:hover {
+            background-color: var(--primary-green);
+        }
+
+        .form-feedback {
+            margin-top: 1rem;
+            padding: 0.85rem;
+            border-radius: 5px;
+            overflow-wrap: anywhere;
+        }
+
+        .form-feedback.success {
+            background-color: #e8f5e9;
+            color: var(--primary-green);
+            border: 1px solid #a5d6a7;
+        }
+
+        .form-feedback.error {
+            background-color: #ffebee;
+            color: var(--error-red);
+            border: 1px solid #ffcdd2;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            .logo h1 {
+                font-size: 1.7rem;
+            }
+
+            nav a {
+                padding: 0.7rem 0.85rem;
+            }
+
+            .announcement-card,
+            .form-container {
+                padding: 1.25rem;
+            }
+
+            .content-container > h2 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SUNRISE ACRES FARM</h1>
+            <div class="hero-tagline">Fresh | Local</div>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="order_delivery.html">Order &amp; Delivery</a></li>
+                <li><a href="enquiry.html" class="active" aria-current="page">Enquiry Ledger</a></li>
+                <li><a href="gallery_reviews.html">Gallery</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="Announcement" aria-labelledby="produceEnquiryHeading">
+            <h2 id="produceEnquiryHeading">Organic Crop &amp; Produce Enquiry</h2>
+            <div class="announcement-card">
+                <form id="produceEnquiryForm" novalidate>
+                    <div class="form-field">
+                        <label for="customerName">Full Name / Business Entity</label>
+                        <input type="text" id="customerName" name="name" class="form-control" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="customerEmail">Contact Email Address</label>
+                        <input type="email" id="customerEmail" name="email" class="form-control" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="produceInterest">Produce of Interest</label>
+                        <select id="produceInterest" name="produce" class="form-control"  required>
+                            <option value="">-- Select Produce --</option>
+                            <option value="spinach">Fresh Spinach</option>
+                            <option value="cabbage">Fresh Cabbage</option>
+                            <option value="tomatoes">Fresh Tomatoes</option>
+                            <option value="eggs">Eggs</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="weeklyVolume">Estimated Weekly Quantity</label>
+                        <input type="text"id="weeklyVolume"name="weeklyVolume"class="form-control"placeholder="e.g. 50 kg of spinach weekly">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Produce Enquiry</button>
+                    <div id="produceEnquiryFeedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="content-container" aria-labelledby="trackingHeading">
+            <h2 id="trackingHeading">Bulk Tracking &amp; Reservation</h2>
+            <p class="section-intro">If you have received a batch or tracking code, enter it below. You can also provide your quantity and delivery requirements. </p>
+            <div class="form-container">
+                <form id="farmEnquiryForm" novalidate>
+                    <div class="form-group">
+                        <label for="orderReference">Customer Tracking Code</label>
+                        <input type="text" id="orderReference"name="orderReference" class="form-control" placeholder="e.g. BATCH-2026-X8" autocomplete="off"
+                        >
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox"id="priorityDelivery" name="priorityDelivery">
+                        <label for="priorityDelivery">Request cold-chain delivery management (under 4°C)</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="enquiryDetails">Quantity &amp; Logistics Notes</label>
+                        <textarea id="enquiryDetails"name="enquiryDetails" class="form-control"rows="4"placeholder="Specify quantities, delivery dates or logistics requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-action">Submit Bulk Reservation Enquiry</button>
+                    <div id="trackingFeedback" class="form-feedback"role="status" aria-live="polite"hidden></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved.| Proudly serving Gauteng, South Africa.
+        </p>
+    </footer>
+    <script src="javascript/maps.js"></script>
+    <script src="javascript/enquiry.js"></script>
+</body>
+</html>

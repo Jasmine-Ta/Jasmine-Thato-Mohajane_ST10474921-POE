@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNRISE ACRES FARM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Sunrise Acres Farm</title>
+<meta name="description" content="Welcome to Sunrise Acres Farm. Natively distributing fresh, sustainably grown spinach, cabbage, tomatoes, and layers eggs direct from my Akasia plots.">
+<meta name="keywords" content="Sunrise Acres, Farm Market, Organic Vegetables, Fresh Eggs Akasia, Buy Cabbage Pretoria, Sustainable Sourcing Gauteng, Spinach Plots South Africa, Local Produce Delivery">
+<meta name="author" content="Thato Jasmine Mohajane">
+<link rel="stylesheet" href="style.css">
     <style>
         :root {
             --primary-green: #2c5e3b;
@@ -207,15 +211,6 @@
             margin-bottom: 1rem;
         }
 
-        .product-card-item img {
-            width: 100%;             
-            height: 200px;           
-            object-fit: cover;      
-            border-top-left-radius: 8px; 
-            border-top-right-radius: 8px;
-            display: block; 
-        } 
-
         .produce-card h3 {
             color: var(--primary-green);
             margin-bottom: 0.5rem;
@@ -224,6 +219,15 @@
         .produce-card p {
             padding: 0 1rem;
             color: #666;
+        }
+
+        
+        #map {
+            width: 100%;
+            height: 450px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            z-index: 1;
         }
 
         footer {
@@ -244,9 +248,10 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home Page</a></li>
-                <li><a href="About_us.html">About Us</a></li>
-                <li><a href="Products.html">Our Products</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Our Products</a></li>
                 <li><a href="order_delivery.html">Order / Delivery</a></li>
+                <li><a href="enquiry.html">Enquiry Ledger</a></li>
                 <li><a href="gallery_reviews.html">Farm Gallery / Reviews</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
@@ -258,12 +263,12 @@
             <h2>Fresh Seasonal Vegetables.</h2>
             <p>Affordable, High-quality local produce grown sustainably in Gauteng</p>
             <div class="cta-buttons">
-                <a href="Products.html" class="btn btn-primary">View Product</a>
+                <a href="products.html" class="btn btn-primary">View Products</a>
                 <a href="order_delivery.html" class="btn btn-secondary">Order Now</a>
             </div>
             <div class="hero-thumbs">
                 <img src="_images/Cabbage.jpg" alt="Cabbage image" height="80px" width="80px">
-                <img src="_images\Spinach.jpg" alt="Spinach image" height="80px" width="80px">
+                <img src="_images/Spinach.jpg" alt="Spinach image" height="80px" width="80px">
                 <img src="_images/Tomatoes.jpg" alt="Tomatoes image" height="80px" width="80px">
                 <img src="_images/Root vegetables.jpg" alt="Root Vegetables image" height="80px" width="80px">
             </div>
@@ -294,9 +299,24 @@
         </div>
     </main>
 
+<div class="store-map-wrapper">
+    <iframe
+        src="https://maps.google.com/maps?q=Plot%2037%20Tweedragt%2C%20Boschkop%2C%20Pretoria%20East%2C%20South%20Africa&output=embed"
+        title="Sunrise Acres Farm sample location map"
+        width="100%"
+        height="450"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
     <footer>
         <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved. | Proudly serving Gauteng, South Africa.</p>
     </footer>
+    <script src="javascript/maps.js"></script>
 </body>
 </html>
 
+    
+    

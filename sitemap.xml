@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  
+  <!-- Sunrise Acres Farm Primary Landing Hub -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Live Product & Crop Catalogue Matrix -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Interactive E-Commerce Checkout Desk -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Specialized Bulk Wholesale Reservation Form -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Lightbox Visual Gallery & Customer Testimonials -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- General Support Feedback Form Portal -->
+  <url>
+    <loc>https://github.io</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>

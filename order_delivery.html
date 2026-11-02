@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order &amp; Delivery - SUNRISE ACRES FARM</title>
+    <title>Order & Delivery | Sunrise Acres Farm Basket Checkout</title>
+    <meta name="description" content="Calculate your fresh vegetable checkout total and schedule delivery slots. Secure clean, organic farm goods using my validated transaction portal.">
+    <meta name="keywords" content="Sunrise Acres, Farm Market, Organic Vegetables, Fresh Eggs Akasia, Buy Cabbage Pretoria, Sustainable Sourcing Gauteng, Spinach Plots South Africa, Local Produce Delivery">
+    <meta name="author" content="Thato Jasmine Mohajane">
     <link rel="stylesheet" href="style.css">
-</head>
-<style>
+    <style>
         :root {
             --primary-green: #2c5e3b;
             --accent-green: #4caf50;
@@ -14,6 +16,7 @@
             --light-bg: #f9f6f0;
             --white: #ffffff;
             --text-dark: #333333;
+            --error-red: #c62828;
         }
 
         * {
@@ -80,143 +83,131 @@
             background-color: var(--accent-green);
         }
 
-        .hero-banner {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('_images/Cabbage.jpg') center/cover no-repeat;
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 1rem;
-        }
-
-        .hero-content h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-green);
-            color: var(--white);
-        }
-
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--primary-green);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .hero-thumbs {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-thumbs img {
-            border-radius: 50%;
-            border: 3px solid var(--white);
-            object-fit: cover;
-        }
-
-        .Announcement {
-            max-width: 800px;
+        .content-container {
+            max-width: 750px;
             margin: 3rem auto;
             padding: 0 1rem;
         }
 
-        .Announcement h3 {
+        .content-container h2 {
             color: var(--primary-green);
-            margin-bottom: 0.75rem;
-            font-size: 1.5rem;
-        }
-
-        .announcement-card {
-            background-color: var(--white);
-            padding: 1.5rem;
-            border-left: 5px solid var(--accent-green);
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .announcement-card h4 {
-            color: var(--earth-brown);
-            margin-bottom: 0.5rem;
-        }
-
-        .featured-produce {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 0 1rem;
-        }
-
-        .featured-produce > h2 {
             text-align: center;
-            color: var(--primary-green);
             margin-bottom: 2rem;
             font-size: 2rem;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .produce-card {
+        .form-container {
             background-color: var(--white);
+            padding: 2.5rem;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
-            padding-bottom: 1.5rem;
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        .produce-card:hover {
-            transform: translateY(-5px);
+        .form-group {
+            margin-bottom: 1.5rem;
         }
 
-        .produce-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-
-        .produce-card h3 {
-            color: var(--primary-green);
+        .form-group label {
+            display: block;
+            font-weight: 600;
             margin-bottom: 0.5rem;
+            color: var(--primary-green);
         }
 
-        .produce-card p {
-            padding: 0 1rem;
-            color: #666;
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-green);
+        }
+
+        .input-error {
+            border-color: var(--error-red) !important;
+            background-color: #ffebee;
+        }
+
+        .section-label {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            margin: 1.5rem 0 0.75rem 0;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 0.25rem;
+        }
+
+        .checkbox-list, .radio-list {
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
+
+        .checkbox-group input, .radio-group input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .feedback-box {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+            display: none;
+            text-align: center;
+        }
+
+        .error-msg {
+            display: block !important;
+            background-color: #ffebee;
+            color: var(--error-red);
+            border: 1px solid #ffcdd2;
+        }
+
+        .loading-msg {
+            display: block !important;
+            background-color: #e8f5e9;
+            color: var(--primary-green);
+            border: 1px solid #c8e6c9;
+        }
+
+        .success-msg {
+            display: block !important;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+            font-size: 1.05rem;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.85rem;
+            background-color: var(--accent-green);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-green);
         }
 
         footer {
@@ -227,6 +218,7 @@
             margin-top: 4rem;
         }
     </style>
+</head>
 <body>
     <header>
         <div class="logo">
@@ -236,70 +228,68 @@
         <nav>
             <ul> 
                 <li><a href="index.html">Home Page</a></li>
-                <li><a href="About_us.html">About Us</a></li>
-                <li><a href="Products.html">Our Products</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Our Products</a></li>
                 <li><a href="order_delivery.html" class="active">Order / Delivery</a></li>
+                <li><a href="enquiry.html">Enquiry Ledger</a></li>
                 <li><a href="gallery_reviews.html">Farm Gallery / Reviews</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-
     <main class="content-container">
         <h2>Place Your Farm Order</h2>
         <div class="form-container">
-            <form action="#" method="POST">
+            <form id="secureCheckoutForm" novalidate>
                 <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                    <label for="customerFullName">Full Name</label>
+                    <input type="text" id="customerFullName" class="form-control" required placeholder="Enter your full name">
                 </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required placeholder="name@example.com">
-            </div>
-        <div class="form-group">
-            <h1><label>Select Produce Needed:</label></h1>
-        <div class="checkbox-list">
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-cabbage" name="produce" value="cabbage">
-                <label for="prod-cabbage">Crisp Cabbage</label>
-            </div>
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-spinach" name="produce" value="spinach">
-                <label for="prod-spinach">Garden Spinach</label>
-            </div>
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-tomatoes" name="produce" value="tomatoes">
-                <label for="prod-tomatoes">Vine Tomatoes</label>
-            </div>
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-goats" name="produce" value="goats">
-                <label for="prod-goats">Live Goats</label>
-            </div>
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-eggs" name="produce" value="eggs">
-                <label for="prod-eggs">Farm Fresh Eggs</label>
-            </div>
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-cattles" name="produce" value="cattles">
-                <label for="prod-cattles">Live Cattles</label>
-            </div>
-        <div class="checkbox-group">
-                <input type="checkbox" id="prod-others" name="produce" value="others">
-                <label for="prod-tomatoes">Other</label>
-            </div>
-            </div>
-            <div class="form-group">
-                <label for="delivery-addr">Delivery Address</label>
-                <textarea id="delivery-addr" name="address" rows="3" required placeholder="Enter delivery details within Gauteng"></textarea>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number</label>
+                    <input type="tel" id="customerPhone" class="form-control" required placeholder="e.g. 0821234567">
                 </div>
-                <button type="submit" class="btn-action">Submit Order Request</button>
+
+                <div class="form-group">
+                    <label for="itemSelection">Select Primary Produce Item</label>
+                    <select id="itemSelection" class="form-control" required>
+                        <option value="">-- Choose Harvest Item --</option>
+                        <option value="jeans">Crisp Cabbage (R600.00 Basket Max Bulk)</option>
+                        <option value="tops">Garden Spinach (R150.00 Basket Combo)</option>
+                        <option value="sandals">Plump Tomatoes (R160.00 Harvest Pack)</option>
+                    </select>
+                </div>
+
+                <p class="section-label">Fulfillment &amp; Shipping Profile</p>
+                <div class="radio-list">
+                    <label class="radio-group">
+                        <input type="radio" name="deliveryMethod" value="collect" checked>
+                        <span>Click and Collect (Akasia Farm Depot - Free)</span>
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" name="deliveryMethod" value="gauteng">
+                        <span>Pretoria Local Courier (R60.00 Delivery Fee)</span>
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" name="deliveryMethod" value="nationwide">
+                        <span>Greater Gauteng Nationwide Freight (R100.00 Delivery Fee)</span>
+                    </label>
+                </div>
+
+                <div id="shippingAddressBlock" class="form-group" hidden>
+                    <label for="shippingAddress">Physical Delivery Address</label>
+                    <textarea id="shippingAddress" class="form-control" rows="3" placeholder="Enter your full delivery address layout"></textarea>
+                </div>
+                <div id="checkoutFeedback" class="feedback-box" role="status"></div>
+                <button type="submit" class="btn-submit">Submit Order via AJAX</button>
             </form>
         </div>
     </main>
-
     <footer>
-        <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved. | Proudly serving Gauteng, South Africa.</p>
+        <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved. | Proudly serving Akasia &amp; Pretoria, South Africa.</p>
     </footer>
+
+<script src="javascript/delivery.js"></script>
 </body>
 </html>

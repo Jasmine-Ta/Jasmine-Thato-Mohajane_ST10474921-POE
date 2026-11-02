@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - SUNRISE ACRES FARM</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - SUNRISE ACRES FARM</title>
+<meta name="description" content="Reach out directly to Sunrise Acres Farm. Submit field questions, wholesale delivery feedback, or order setup requests through our verified support desk.">
+<meta name="keywords" content="Sunrise Acres, Farm Market, Organic Vegetables, Fresh Eggs Akasia, Buy Cabbage Pretoria, Sustainable Sourcing Gauteng, Spinach Plots South Africa, Local Produce Delivery"> 
+<meta name="author" content="Thato Jasmine Mohajane">
+<link rel="stylesheet" href="style.css">
 </head>
 <style>
         :root {
-            --primary-green: #2c5e3b;
+              --primary-green: #2c5e3b;
             --accent-green: #4caf50;
             --earth-brown: #5c4033;
             --light-bg: #f9f6f0;
             --white: #ffffff;
             --text-dark: #333333;
+            --error-red: #c62828;
         }
 
         * {
@@ -238,64 +242,83 @@
             
             <ul> 
                 <li><a href="index.html">Home Page</a></li>
-                <li><a href="About_us.html">About Us</a></li>
-                <li><a href="Products.html">Our Products</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="products.html">Our Products</a></li>
                 <li><a href="order_delivery.html">Order / Delivery</a></li>
+                <li><a href="enquiry.html">Enquiry Ledger</a></li>
                 <li><a href="gallery_reviews.html">Farm Gallery / Reviews</a></li>
                 <li><a href="contact_us.html" class="active">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-<main class="content-container">
-   <br><h2>Get In Touch with Us!</h2></br>
-        <div class="contact-layout">
-        <div class="contact-info">
-<h3>Our Farm Store Address:</h3>
-    <li><p>Plot 42, Old Pretoria Road,</p></li>
-    <li>Lanseria, Gauteng, 1748</p></li>
-    
-<br><div class="operating-info"></div></br>
-<h3>Our Operating Hours:</h3>
-        <ul class="hours-list">
-        <li><strong>Monday - Friday:</strong> 07:00am - 17:00pm</li>
-        <li><strong>Saturday:</strong> 08:00am - 14:00pm</li>
-        <li><strong>Sunday & Public Holidays:</strong> Closed</li>
-        <br></ul>
-        </br>
-
-<h3>Follow Our Journey Below:</h3>
-        <div class="social-links">
-        <a href="https://facebook.com" target="_blank" class="social-btn">Facebook</a>
-        <a href="https://instagram.com" target="_blank" class="social-btn">Instagram</a>
-        </div>
+<div class="contact-info">
+<section class="Announcement">
+    <h3>Get In Touch with Sunrise Acres</h3>
+    <div class="announcement-card">
+        <form novalidate>
+            <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: var(--primary-green);">Your Full Name</label>
+                <input type="text" required style="width: 100%; padding: 0.75rem; border: 1px solid #a3b899; border-radius: 5px; background: var(--white);">
+            </div>
+            
+            <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: var(--primary-green);">Email Address</label>
+                <input type="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #a3b899; border-radius: 5px; background: var(--white);">
             </div>
 
-    <div class="form-container">
-<br><h3>Send us a Message for Enquiries</h3></br>
-            <form action="#" method="POST">
-    <div class="form-group">
-            <label for="contact-name">Your Name</label>
-            <input type="text" id="contact-name" required placeholder="Enter your name">
-    </div>
-    <div class="form-group">
-            <label for="contact-email">Email Address</label>
-            <input type="email" id="contact-email" required placeholder="yourname@domain.com">
-    </div>
-    <div class="form-group">
-            <label for="contact-msg">Message</label>
-            <textarea id="contact-msg" rows="5" required placeholder="How can we help your family or business?"></textarea>
-    </div>
-    <button type="submit" class="btn-action">Send Message</button>
+            <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; font-weight: bold; margin-bottom: 0.5rem; color: var(--primary-green);">Detailed Message</label>
+                <textarea required rows="5" style="width: 100%; padding: 0.75rem; border: 1px solid #a3b899; border-radius: 5px; background: var(--white); font-family: inherit; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="border: none; width: 100%; cursor: pointer;">
+                Transmit Message
+            </button>
         </form>
     </div>
+</section>
+<section class="store-location-section" aria-labelledby="storeLocationHeading">
+    <div class="store-location-container">
 
+        <div class="section-heading">
+            <h2 id="storeLocationHeading" class="section-title">
+                Visit Sunrise Acres Farm
+            </h2>
+
+            <p class="section-subtitle">
+                Find us in Akasia, Pretoria, Gauteng, South Africa.
+            </p>
         </div>
-    </main>
 
+        <div class="store-map-wrapper">
+            <iframe
+                src="https://maps.google.com/maps?q=Akasia%2C%20Pretoria%2C%20South%20Africa&output=embed"
+                title="Map showing Akasia, Pretoria, for Sunrise Acres Farm"
+                width="100%"
+                height="450"
+                style="border: 0; border-radius: 8px;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="store-address">
+            <h3>Our Farm Location</h3>
+            <p><strong>Business:</strong> Sunrise Acres Farm</p>
+            <p><strong>Area:</strong> Akasia, Pretoria, Gauteng</p>
+            <p><strong>Country:</strong> South Africa</p>
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Akasia%2C%20Pretoria%2C%20South%20Africa" target="_blank" rel="noopener noreferrer"> Get Directions</a>
+        </div>
+    </div>
+</section>
+
+    </main>
 <footer>
         <p>&copy; 2026 Sunrise Acres Farm. All Rights Reserved. | Proudly serving Gauteng, South Africa.</p>
 </footer>
-
+      <script src="javascript/contact_us.js"></script>
+      <script src="javascript/map.js"></script>
 </body>
 </html>
